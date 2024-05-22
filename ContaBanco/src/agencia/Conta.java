@@ -53,7 +53,7 @@ public class Conta {
     @Override
     public String toString() {
         return "------------------------------------------------------------\n" +
-                "Extrato Bancário:\n" +
+                "Saldo Atual:\n" +
                 "------------------------------------------------------------\n" +
                 "Número da Conta: " + numero + "\n" +
                 "Agência: " + agencia + "\n" +
@@ -94,7 +94,7 @@ public class Conta {
         + "\t" + " Agencia: "+ contaDestino.getAgencia() +"\n"
         + "\t" + " Conta: "+ contaDestino.getNumero() +"\n"
         + "\t" + " Realizada em: " + java.time.LocalDateTime.now().format(formatter) +"\n");
-    }
+    } 
 
     public void extrato() {
         System.out.println("------------------------------------------------------------");
@@ -103,6 +103,6 @@ public class Conta {
         for (String operacao : historicoDeOperacoes) {
             System.out.println(operacao);
         }
-        System.out.println(String.format("%.2f", saldo));
+        System.out.println("Saldo atual: " + String.format("%.2f", saldo));
     }
 }
